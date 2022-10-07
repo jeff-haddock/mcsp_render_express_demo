@@ -1,7 +1,7 @@
 const ENV = "production";
 //const ENV = "dev";
 
-let ApiUrl = ENV == "dev" ? "http://localhost:3001" : "https://mcsp-render-express-demo-api.onrender.com:/";
+let ApiUrl = ENV == "dev" ? "http://localhost:3001" : "https://mcsp-render-express-demo-api.onrender.com:";
 console.log("API:", ApiUrl);
 
 var classList = document.getElementById("class-list");
