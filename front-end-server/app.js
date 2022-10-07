@@ -4,12 +4,7 @@ const PORT = config.port;
 
 const app = express();
 
-app.use(express.static(__dirname + '/public'))
-
-app.get("/config", (req, res) => {
-    res.send(config);
-})
-
+app.use(express.static('public'))
 
 app.listen(PORT, () => {
     console.log(`your front end server that serves up static files, is listening on ${PORT}`);

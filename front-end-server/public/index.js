@@ -1,10 +1,10 @@
-const config = require('../config');
+const ENV = "production";
+//const ENV = "dev";
 
-let ApiUrl = config[process.env.NODE_ENV || "dev"];
-
+let ApiUrl = ENV == "dev" ? "http://localhost:3001" : "https://mcsp-render-express-demo-api.onrender.com:38505/";
+console.log("API:", ApiUrl);
 
 var classList = document.getElementById("class-list");
-console.log("the actual HTML element: ",classList);
 
 fetch(`${ApiUrl}/api/students`)
     .then(response => response.json())
@@ -42,7 +42,6 @@ var submit = document.getElementById('create-student').addEventListener("click",
             alert("something went HORRIBLY WRONG!!!", response);
         }
     })
-    //.then(data => console.log("success! Student added!", data))
     .catch(error => console.error(error));
 
 })
