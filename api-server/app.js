@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { Client } = require('pg');
 const config = require('./config')[process.env.NODE_ENV||"dev"]
+const PORT = config.PORT;
 
 
 
@@ -14,7 +15,6 @@ const app = express()
 app.use(cors());
 app.use(express.json());
 
-const PORT = 3000
 
 app.get('/', (req, res) => {
     res.send('Hello World');
