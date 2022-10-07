@@ -29,7 +29,7 @@ var submit = document.getElementById('create-student').addEventListener("click",
     
     fetch(`${ApiUrl}/api/students`, {
         method: 'POST',
-        mode: cors,
+        mode: "cors",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(student)
     })
