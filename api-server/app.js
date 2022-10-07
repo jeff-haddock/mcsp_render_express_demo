@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { Client } = require('pg');
-const config = require('./config.json')[process.env.NODE_ENV||"dev"]
+const config = require('./config')[process.env.NODE_ENV||"dev"]
 
 
 
